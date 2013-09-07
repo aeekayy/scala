@@ -5,11 +5,12 @@ object Base {
 	  val bzdb = new DataAdapter; 
 	  
 	  println("Hello, world!");
-	  // set the database config
-	  val conn_str = "jdbc:postgresql://" + bzdb.host + ":" + bzdb.port + "/bzaccounts?user=" + bzdb.username;
 	  
 	  // load the driver
 	  classOf[org.postgresql.Driver];
+	  
+	  // set the database config
+	  val conn_str = "jdbc:postgresql:bzaccounts?user=farye&password=g3mst0n3";
 	  
 	  // setup the connection
 	  val conn = DriverManager.getConnection(conn_str);
